@@ -7,20 +7,36 @@
   <style>
     body {
       font-family: sans-serif;
-      max-width: 800px;
+      max-width: 1400px;
       margin: 40px auto;
       padding: 0 20px;
       text-align: center;
     }
+    .video-container {
+      display: flex;
+      gap: 20px;
+      margin-top: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .video-wrapper {
+      flex: 1;
+      min-width: 300px;
+      max-width: 50%;
+    }
     video {
       width: 100%;
       border-radius: 8px;
-      margin-top: 20px;
     }
     .caption {
       margin-top: 15px;
       font-size: 0.95em;
       color: #444;
+    }
+    @media (max-width: 768px) {
+      .video-wrapper {
+        max-width: 100%;
+      }
     }
   </style>
 </head>
@@ -28,17 +44,30 @@
 
 <h2>Autonomous Ship Navigation in Ice-Covered Waters</h2>
 <p>
-Diffusion Model Predictive Control (DMPC) for safe and efficient navigation
+Diffusion Model Predictive Control for safe and efficient navigation
 in stochastic ice environments.
 </p>
 
-<video controls loop autoplay muted>
-  <source src="simulation.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
-<div class="caption">
-Simulation of autonomous vessel navigation through ice floes using DMPC.
+<div class="video-container">
+  <div class="video-wrapper">
+    <video controls loop autoplay muted>
+      <source src="simulation.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="caption">
+      Simulation of autonomous vessel navigation through ice floes using Diffusion MPC.
+    </div>
+  </div>
+  
+  <div class="video-wrapper">
+    <video controls loop autoplay muted>
+      <source src="cost-map.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="caption">
+      Real-time cost-map visualization showing navigation constraints.
+    </div>
+  </div>
 </div>
 
 </body>
