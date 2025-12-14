@@ -33,9 +33,115 @@
       font-size: 0.95em;
       color: #444;
     }
+    .analysis-section {
+      margin-top: 60px;
+    }
+    .analysis-section h3 {
+      margin-bottom: 30px;
+      color: #333;
+    }
+    .plots-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+    .plot-placeholder {
+      background-color: #f5f5f5;
+      border: 2px dashed #ccc;
+      border-radius: 8px;
+      padding: 60px 20px;
+      min-height: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #888;
+      transition: all 0.3s ease;
+    }
+    .plot-placeholder:hover {
+      border-color: #999;
+      background-color: #f0f0f0;
+    }
+    .plot-placeholder img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+      display: none;
+    }
+    .plot-placeholder.has-image img {
+      display: block;
+    }
+    .plot-placeholder.has-image {
+      padding: 10px;
+      border-style: solid;
+      background-color: #fff;
+    }
+    .plot-title {
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #555;
+    }
+    .plot-description {
+      font-size: 0.9em;
+      color: #777;
+    }
+    .bibliography-section {
+      margin-top: 80px;
+      text-align: left;
+      padding-top: 40px;
+      border-top: 2px solid #e0e0e0;
+    }
+    .bibliography-section h3 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+    .bibliography-list {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .bibliography-item {
+      margin-bottom: 20px;
+      padding: 15px;
+      background-color: #fafafa;
+      border-left: 3px solid #4a90e2;
+      border-radius: 4px;
+      transition: all 0.2s ease;
+    }
+    .bibliography-item:hover {
+      background-color: #f5f5f5;
+      border-left-color: #357abd;
+    }
+    .bibliography-item a {
+      color: #4a90e2;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .bibliography-item a:hover {
+      text-decoration: underline;
+      color: #357abd;
+    }
+    .bibliography-item .citation {
+      font-size: 0.95em;
+      line-height: 1.6;
+      color: #333;
+    }
+    .bibliography-item .url {
+      font-size: 0.85em;
+      color: #666;
+      margin-top: 5px;
+      word-break: break-all;
+    }
     @media (max-width: 768px) {
       .video-wrapper {
         max-width: 100%;
+      }
+      .plots-container {
+        grid-template-columns: 1fr;
+      }
+      .bibliography-section {
+        text-align: left;
       }
     }
   </style>
@@ -66,6 +172,93 @@ in stochastic ice environments.
     </video>
     <div class="caption">
       Real-time cost-map visualization showing navigation constraints.
+    </div>
+  </div>
+</div>
+
+<div class="analysis-section">
+  <h3>Analysis Plots</h3>
+  <div class="plots-container">
+    <div class="plot-placeholder">
+      <div class="plot-title">Trajectory Analysis</div>
+      <div class="plot-description">Plot placeholder - Add trajectory visualization</div>
+      <img src="" alt="Trajectory Analysis">
+    </div>
+    
+    <div class="plot-placeholder">
+      <div class="plot-title">Control Inputs</div>
+      <div class="plot-description">Plot placeholder - Add control signal analysis</div>
+      <img src="" alt="Control Inputs">
+    </div>
+    
+    <div class="plot-placeholder">
+      <div class="plot-title">Performance Metrics</div>
+      <div class="plot-description">Plot placeholder - Add performance metrics</div>
+      <img src="" alt="Performance Metrics">
+    </div>
+    
+    <div class="plot-placeholder">
+      <div class="plot-title">Cost Function Evolution</div>
+      <div class="plot-description">Plot placeholder - Add cost function over time</div>
+      <img src="" alt="Cost Function Evolution">
+    </div>
+  </div>
+</div>
+
+<div class="bibliography-section">
+  <h3>References</h3>
+  <div class="bibliography-list">
+    <div class="bibliography-item">
+      <div class="citation">
+        de Schaetzen, R., Botros, A., Zhong, N., Murrant, K., Gash, R., & Smith, S. L. (2024). 
+        <a href="https://arxiv.org/abs/2411.17155" target="_blank">AUTO-IceNav: A Local Navigation Strategy for Autonomous Surface Ships in Broken Ice Fields</a>. 
+        arXiv preprint arXiv:2411.17155.
+      </div>
+      <div class="url">https://arxiv.org/abs/2411.17155</div>
+    </div>
+
+    <div class="bibliography-item">
+      <div class="citation">
+        Pan, C., Yi, Z., Shi, G., & Qu, G. (2024). 
+        <a href="https://arxiv.org/abs/2407.01573" target="_blank">Model-Based Diffusion for Trajectory Optimization</a>. 
+        arXiv preprint arXiv:2407.01573.
+      </div>
+      <div class="url">https://arxiv.org/abs/2407.01573</div>
+    </div>
+
+    <div class="bibliography-item">
+      <div class="citation">
+        <a href="https://tc.copernicus.org/articles/16/4363/2022/" target="_blank">The Cryosphere, Volume 16, Issue 12, 2022</a>.
+      </div>
+      <div class="url">https://tc.copernicus.org/articles/16/4363/2022/</div>
+    </div>
+
+    <div class="bibliography-item">
+      <div class="citation">
+        <a href="https://tc.copernicus.org/articles/12/343/2018/" target="_blank">The Cryosphere, Volume 12, Issue 1, 2018</a>.
+      </div>
+      <div class="url">https://tc.copernicus.org/articles/12/343/2018/</div>
+    </div>
+
+    <div class="bibliography-item">
+      <div class="citation">
+        <a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022MS003247" target="_blank">Journal of Advances in Modeling Earth Systems, 2022</a>.
+      </div>
+      <div class="url">https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022MS003247</div>
+    </div>
+
+    <div class="bibliography-item">
+      <div class="citation">
+        <a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2024GL110552" target="_blank">Geophysical Research Letters, 2024</a>.
+      </div>
+      <div class="url">https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2024GL110552</div>
+    </div>
+
+    <div class="bibliography-item">
+      <div class="citation">
+        <a href="https://tc.copernicus.org/articles/16/1563/2022/" target="_blank">The Cryosphere, Volume 16, Issue 4, 2022</a>.
+      </div>
+      <div class="url">https://tc.copernicus.org/articles/16/1563/2022/</div>
     </div>
   </div>
 </div>
