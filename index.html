@@ -47,44 +47,49 @@
       margin-top: 30px;
     }
     .plot-placeholder {
-      background-color: #f5f5f5;
-      border: 2px dashed #ccc;
+      background-color: #fff;
+      border: 2px solid #ddd;
       border-radius: 8px;
-      padding: 60px 20px;
-      min-height: 300px;
+      padding: 15px;
+      min-height: 400px;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      color: #888;
       transition: all 0.3s ease;
     }
     .plot-placeholder:hover {
-      border-color: #999;
-      background-color: #f0f0f0;
+      border-color: #4a90e2;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
-    .plot-placeholder img {
-      max-width: 100%;
-      height: auto;
+    .plot-placeholder iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
       border-radius: 4px;
-      display: none;
-    }
-    .plot-placeholder.has-image img {
-      display: block;
-    }
-    .plot-placeholder.has-image {
-      padding: 10px;
-      border-style: solid;
-      background-color: #fff;
+      flex: 1;
     }
     .plot-title {
       font-weight: 600;
       margin-bottom: 10px;
-      color: #555;
+      color: #333;
+      text-align: center;
     }
     .plot-description {
       font-size: 0.9em;
-      color: #777;
+      color: #666;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .plot-link {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .plot-link a {
+      color: #4a90e2;
+      text-decoration: none;
+      font-size: 0.85em;
+    }
+    .plot-link a:hover {
+      text-decoration: underline;
     }
     .bibliography-section {
       margin-top: 80px;
@@ -180,27 +185,52 @@ in stochastic ice environments See full repo for implementation details: <a href
   <h3>Analysis Plots</h3>
   <div class="plots-container">
     <div class="plot-placeholder">
-      <div class="plot-title">Trajectory Analysis</div>
-      <div class="plot-description">Plot placeholder - Add trajectory visualization</div>
-      <img src="" alt="Trajectory Analysis">
+      <div class="plot-title">Simulation Overview</div>
+      <div class="plot-description">Overall simulation visualization</div>
+      <iframe src="sim.pdf" type="application/pdf"></iframe>
+      <div class="plot-link"><a href="sim.pdf" target="_blank">Open PDF in new tab</a></div>
     </div>
     
     <div class="plot-placeholder">
-      <div class="plot-title">Control Inputs</div>
-      <div class="plot-description">Plot placeholder - Add control signal analysis</div>
-      <img src="" alt="Control Inputs">
+      <div class="plot-title">State vs Time</div>
+      <div class="plot-description">System state evolution over time</div>
+      <iframe src="state_vs_time.pdf" type="application/pdf"></iframe>
+      <div class="plot-link"><a href="state_vs_time.pdf" target="_blank">Open PDF in new tab</a></div>
     </div>
     
     <div class="plot-placeholder">
-      <div class="plot-title">Performance Metrics</div>
-      <div class="plot-description">Plot placeholder - Add performance metrics</div>
-      <img src="" alt="Performance Metrics">
+      <div class="plot-title">Control Inputs vs Time</div>
+      <div class="plot-description">Control signal analysis over time</div>
+      <iframe src="control_vs_time.pdf" type="application/pdf"></iframe>
+      <div class="plot-link"><a href="control_vs_time.pdf" target="_blank">Open PDF in new tab</a></div>
     </div>
     
     <div class="plot-placeholder">
-      <div class="plot-title">Cost Function Evolution</div>
-      <div class="plot-description">Plot placeholder - Add cost function over time</div>
-      <img src="" alt="Cost Function Evolution">
+      <div class="plot-title">Kinetic Energy Impulse vs Time</div>
+      <div class="plot-description">Kinetic energy impulse analysis</div>
+      <iframe src="ke_impulse_vs_time.pdf" type="application/pdf"></iframe>
+      <div class="plot-link"><a href="ke_impulse_vs_time.pdf" target="_blank">Open PDF in new tab</a></div>
+    </div>
+    
+    <div class="plot-placeholder">
+      <div class="plot-title">Impact Locations and Impulse</div>
+      <div class="plot-description">Ship-ice collision impact analysis</div>
+      <iframe src="impact_locations_impulse.pdf" type="application/pdf"></iframe>
+      <div class="plot-link"><a href="impact_locations_impulse.pdf" target="_blank">Open PDF in new tab</a></div>
+    </div>
+    
+    <div class="plot-placeholder">
+      <div class="plot-title">Floe Mass Histogram</div>
+      <div class="plot-description">Distribution of ice floe masses</div>
+      <iframe src="floe_mass_hist.pdf" type="application/pdf"></iframe>
+      <div class="plot-link"><a href="floe_mass_hist.pdf" target="_blank">Open PDF in new tab</a></div>
+    </div>
+    
+    <div class="plot-placeholder">
+      <div class="plot-title">Ridging Statistics</div>
+      <div class="plot-description">Ice ridging analysis and statistics</div>
+      <iframe src="ridging_stats.pdf" type="application/pdf"></iframe>
+      <div class="plot-link"><a href="ridging_stats.pdf" target="_blank">Open PDF in new tab</a></div>
     </div>
   </div>
 </div>
