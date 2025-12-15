@@ -51,7 +51,6 @@
       border: 2px solid #ddd;
       border-radius: 8px;
       padding: 15px;
-      min-height: 400px;
       display: flex;
       flex-direction: column;
       transition: all 0.3s ease;
@@ -60,12 +59,11 @@
       border-color: #4a90e2;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
-    .plot-placeholder iframe {
+    .plot-placeholder img {
       width: 100%;
-      height: 400px;
-      border: none;
+      height: auto;
       border-radius: 4px;
-      flex: 1;
+      margin-top: 10px;
     }
     .plot-title {
       font-weight: 600;
@@ -187,50 +185,43 @@ in stochastic ice environments See full repo for implementation details: <a href
     <div class="plot-placeholder">
       <div class="plot-title">Simulation Overview</div>
       <div class="plot-description">Overall simulation visualization</div>
-      <iframe src="sim.pdf" type="application/pdf"></iframe>
-      <div class="plot-link"><a href="sim.pdf" target="_blank">Open PDF in new tab</a></div>
+      <iframe src="sim.png" type="application/png"></iframe>
     </div>
     
     <div class="plot-placeholder">
       <div class="plot-title">State vs Time</div>
       <div class="plot-description">System state evolution over time</div>
-      <iframe src="state_vs_time.pdf" type="application/pdf"></iframe>
-      <div class="plot-link"><a href="state_vs_time.pdf" target="_blank">Open PDF in new tab</a></div>
+      <iframe src="state_vs_time.png" type="application/png"></iframe>
     </div>
     
     <div class="plot-placeholder">
       <div class="plot-title">Control Inputs vs Time</div>
       <div class="plot-description">Control signal analysis over time</div>
-      <iframe src="control_vs_time.pdf" type="application/pdf"></iframe>
-      <div class="plot-link"><a href="control_vs_time.pdf" target="_blank">Open PDF in new tab</a></div>
+      <iframe src="control_vs_time.png" type="application/png"></iframe>
     </div>
     
     <div class="plot-placeholder">
       <div class="plot-title">Kinetic Energy Impulse vs Time</div>
       <div class="plot-description">Kinetic energy impulse analysis</div>
-      <iframe src="ke_impulse_vs_time.pdf" type="application/pdf"></iframe>
-      <div class="plot-link"><a href="ke_impulse_vs_time.pdf" target="_blank">Open PDF in new tab</a></div>
+      <iframe src="ke_impulse_vs_time.png" type="application/png"></iframe>
     </div>
     
     <div class="plot-placeholder">
       <div class="plot-title">Impact Locations and Impulse</div>
       <div class="plot-description">Ship-ice collision impact analysis</div>
-      <iframe src="impact_locations_impulse.pdf" type="application/pdf"></iframe>
-      <div class="plot-link"><a href="impact_locations_impulse.pdf" target="_blank">Open PDF in new tab</a></div>
+      <iframe src="impact_locations_impulse.png" type="application/png"></iframe>
     </div>
     
     <div class="plot-placeholder">
       <div class="plot-title">Floe Mass Histogram</div>
       <div class="plot-description">Distribution of ice floe masses</div>
-      <iframe src="floe_mass_hist.pdf" type="application/pdf"></iframe>
-      <div class="plot-link"><a href="floe_mass_hist.pdf" target="_blank">Open PDF in new tab</a></div>
+      <iframe src="floe_mass_hist.png" type="application/png"></iframe>
     </div>
     
     <div class="plot-placeholder">
       <div class="plot-title">Ridging Statistics</div>
       <div class="plot-description">Ice ridging analysis and statistics</div>
-      <iframe src="ridging_stats.pdf" type="application/pdf"></iframe>
-      <div class="plot-link"><a href="ridging_stats.pdf" target="_blank">Open PDF in new tab</a></div>
+      <iframe src="ridging_stats.png" type="application/png"></iframe>
     </div>
   </div>
 </div>
